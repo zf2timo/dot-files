@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8">
+<phpunit 
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        http://schema.phpunit.de/4.5/phpunit.xsd  
+        backupGlobals="false"
+        backupStaticAttributes="false"
+        bootstrap="vendor/autoload.php"
+        cacheTokens="true"
+        colors="true"
+        convertErrorsToExceptions="true"
+        convertNoticesToExceptions="true"
+        convertWarningsToExceptions="true"
+        forceCoversAnnotation="true"
+        mapTestClassNameToCoveredClassName="true"
+        printerClass="PHPUnit_TextUI_ResultPrinter"
+        processIsolation="false"
+        stopOnError="false"
+        stopOnFailure="false"
+        stopOnIncomplete="false"
+        stopOnSkipped="false"
+        testSuiteLoaderClass="PHPUnit_Runner_StandardTestSuiteLoader"
+        strict="true"
+        verbose="false">
+
+    <!--
+     ! The <testsuites> element and its one or more <testsuite> children can be
+     ! used to compose a test suite out of test suites and test cases.
+     !-->
+    <testsuites>
+        <testsuite>
+            <directory>src/tests/unit-tests/php</directory>
+        </testsuite>
+    </testsuites>
+
+    <!--
+     ! The <filter> element and its children can be used to configure the
+     ! blacklist and whitelist for the code coverage reporting.
+     !-->
+    <filter>
+        <blacklist>
+            <directory suffix=".php">vendor</directory>
+            <directory suffix=".php">src/tests</directory>
+        </blacklist>
+        <whitelist processUncoveredFilesFromWhitelist="true">
+            <directory suffix=".php">src/bin</directory>
+            <directory suffix=".php">src/php</directory>
+            <exclude>
+                <directory suffix="Enum.php">src/php</directory>
+                <directory suffix="Exception.php">src/php</directory>
+                <directory suffix="Interface.php">src/php</directory>
+            </exclude>
+        </whitelist>
+    </filter>
+
+    <!--
+     ! The <php> element and its children can be used to configure PHP settings,
+     ! constants, and global variables. It can also be used to prepend the
+     ! include_path.
+     ! -->
+    <php>
+        <ini name="error_reporting" value="-1" />
+        <ini name="display_errors" value="1" />
+        <ini name="display_startup_errors" value="1" />
+        <ini name="log_errors" value="On" />
+        <ini name="log_errors_max_len" value="0" />
+        <ini name="ignore_repeated_errors" value="0" />
+        <ini name="ignore_repeated_source" value="0" />
+        <ini name="report_memleaks" value="1" />
+        <ini name="track_errors" value="1" />
+        <ini name="html_errors" value="0" />
+        <ini name="xmlrpc_errors" value="0" />
+        <ini name="xmlrpc_error_number" value="0" />
+        <ini name="docref_root" value=".php" />
+        <ini name="error_prepend_string" value="" />
+        <ini name="error_append_string" value="" />
+        <ini name="memory_limit" value="1024M" />
+        <ini name="short_open_tag" value="0" />
+    </php>
+</phpunit>
