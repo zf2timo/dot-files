@@ -51,6 +51,10 @@
         </whitelist>
     </filter>
 
+    <logging>
+        <log type="coverage-html" target="data/coverage/" />
+    </logging>
+
     <!--
      ! The <php> element and its children can be used to configure PHP settings,
      ! constants, and global variables. It can also be used to prepend the
