@@ -7,6 +7,8 @@ alias ls='ls -l --color=auto'
 # Start a debug session on a console
 alias php-debug='export PHP_IDE_CONFIG=serverName=timo.hwxdev; php -dxdebug.remote_autostart=1 -dxdebug.remote_host=192.168.2.195'
 
+alias delete-branches="sh cleanUpGitBranches.sh"
+
 # List all mails
 alias mail='mail -f'
 
