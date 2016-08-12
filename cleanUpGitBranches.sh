@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-BRANCHES="$(git branch --merged | grep -v "\*")"
+BRANCHES="$(git branch --merged | grep -v "\*" | grep -v "master" | grep -v "develop")"
 
 if [ -z $BRANCHES ]; then
     echo "No branch can deleted safely"
