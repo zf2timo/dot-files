@@ -49,7 +49,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-history-substring-search-master vagrant composer cp)
+plugins=(git git-flow git-extra zsh-history-substring-search-master vagrant composer cp docker docker-compose)
 
 # User configuration
 
@@ -82,3 +82,39 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+# -------------------------------------------------------------------
+# ALIASES
+# -------------------------------------------------------------------
+
+## this one saved my butt so many times ##
+alias wget='wget -c'
+
+# Tools
+alias delete-old-branches="sh ~/cleanUpGitBranches.sh"
+alias code-guardian='docker run -it --rm -v"${PWD}:/var/www/html" code-guardian'
+alias start-portainer="docker run --rm -d -p 9900:9000 -v /var/run/docker.sock:/var/run/docker.sock -v /opt/portainer:/data portainer/portainer"
+
+# Stupidity nets
+
+# do not delete / or prompt if deleting more than 3 files at a time #
+alias rm='rm -I --preserve-root'
+
+# confirmation #
+alias mv='mv -i'
+alias cp='cp -i'
+alias ln='ln -i'
+
+# Parenting changing perms on / #
+alias chown='chown --preserve-root'
+alias chmod='chmod --preserve-root'
+alias chgrp='chgrp --preserve-root'
+
+# -------------------------------------------------------------------
+# FUNCTIONS
+# ------------------------------------------------------------------- 
+
+mkcd () {
+  mkdir "$1"
+  cd "$1"
+}
