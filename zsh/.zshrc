@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-  export ZSH=/home/ttewes/.oh-my-zsh
+  export ZSH=~/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -102,7 +102,7 @@ alias weather-ms="curl wttr.in/Münster"
 
 # layziness
 alias storage="cd ~/storage"
-alasi dev="cd ~/dev/"
+alias dev="cd ~/dev/"
 
 # Stupidity nets
 
