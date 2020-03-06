@@ -87,13 +87,22 @@ source $ZSH/oh-my-zsh.sh
 # ALIASES
 # -------------------------------------------------------------------
 
-## this one saved my butt so many times ##
+# Oh my ZSH Plugin extension
+alias dcrr='dcr --rm'
+
+## this one saved by butt so many times ##
 alias wget='wget -c'
 
 # Tools
 alias delete-old-branches="sh ~/cleanUpGitBranches.sh"
-alias code-guardian='docker run -it --rm -v"${PWD}:/var/www/html" code-guardian'
-alias start-portainer="docker run --rm -d -p 9900:9000 -v /var/run/docker.sock:/var/run/docker.sock -v /opt/portainer:/data portainer/portainer"
+alias my-ip='dig +short myip.opendns.com @resolver1.opendns.com'
+
+# weather
+alias weather-ms="curl wttr.in/Münster"
+
+# layziness
+alias storage="cd ~/storage"
+alias dev="cd ~/dev/"
 
 # Stupidity nets
 
