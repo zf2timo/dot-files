@@ -1,33 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:noNamespaceSchemaLocation="http://schema.phpunit.de/5.1/phpunit.xsd"
-        backupGlobals="false"
-        backupStaticAttributes="false"
-        bootstrap="vendor/autoload.php"
-        cacheTokens="true"
-        colors="true"
-        convertErrorsToExceptions="true"
-        convertNoticesToExceptions="true"
-        convertWarningsToExceptions="true"
-        forceCoversAnnotation="true"
-        mapTestClassNameToCoveredClassName="true"
-        printerClass="PHPUnit_TextUI_ResultPrinter"
-        processIsolation="false"
-        stopOnError="false"
-        stopOnFailure="false"
-        stopOnIncomplete="false"
-        stopOnSkipped="false"
-        testSuiteLoaderClass="PHPUnit_Runner_StandardTestSuiteLoader"
-        strict="true"
-        verbose="false">
+         xsi:noNamespaceSchemaLocation="http://schema.phpunit.de/6.3/phpunit.xsd"
+         bootstrap="vendor/autoload.php"
+         cacheTokens="true"
+         colors="true"
+         forceCoversAnnotation="true">
 
     <!--
      ! The <testsuites> element and its one or more <testsuite> children can be
      ! used to compose a test suite out of test suites and test cases.
      !-->
     <testsuites>
-        <testsuite>
-            <directory>src/tests/unit-tests/php</directory>
+        <testsuite name="project name">
+            <directory>test</directory>
         </testsuite>
     </testsuites>
 
@@ -36,10 +21,6 @@
      ! blacklist and whitelist for the code coverage reporting.
      !-->
     <filter>
-        <blacklist>
-            <directory suffix=".php">vendor</directory>
-            <directory suffix=".php">src/tests</directory>
-        </blacklist>
         <whitelist processUncoveredFilesFromWhitelist="true">
             <directory suffix=".php">src/bin</directory>
             <directory suffix=".php">src/php</directory>
@@ -50,6 +31,10 @@
             </exclude>
         </whitelist>
     </filter>
+
+    <logging>
+        <log type="coverage-html" target="data/coverage/" />
+    </logging>
 
     <!--
      ! The <php> element and its children can be used to configure PHP settings,

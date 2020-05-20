@@ -1,0 +1,12 @@
+[core]
+	fileMode = false
+	autocrlf = input
+	excludesfile = ~/.gitignore_global
+	editor = vim
+[merge]
+	ff = false
+[alias]
+    st = status
+    hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+[commit]
+	gpgsign = true
