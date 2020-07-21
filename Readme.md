@@ -9,3 +9,10 @@ Import keybindings into dconf
 ```bash
 $ dconf load /org/gnome/desktop/wm/keybindings/ < dconf/org.gnome.desktop.wm.keybindings.backup
 ```
+
+## Install configs
+Only execute the install Script
+```
+$ bash installConfigs.sh
+```
+The script creates symlinks from the original location into this repository
