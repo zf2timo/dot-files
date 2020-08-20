@@ -97,7 +97,7 @@ alias wget='wget -c'
 alias delete-old-branches="sh ~/cleanUpGitBranches.sh"
 alias my-ip='dig +short myip.opendns.com @resolver1.opendns.com'
 alias dns-statistic='sudo systemd-resolve --statistics'
-alias dn-flush='sudo systemd-resolve --flush-caches'
+alias dns-flush='sudo systemd-resolve --flush-caches'
 
 # weather
 alias weather-ms="curl wttr.in/Münster"
