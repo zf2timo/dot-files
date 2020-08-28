@@ -120,6 +120,11 @@ alias chown='chown --preserve-root'
 alias chmod='chmod --preserve-root'
 alias chgrp='chgrp --preserve-root'
 
+# Load system specific alias file
+if [ -f ~/.zsh_aliases ]; then
+    source ~/.zsh_aliases
+fi
+
 # -------------------------------------------------------------------
 # FUNCTIONS
 # ------------------------------------------------------------------- 
