@@ -53,7 +53,8 @@ plugins=(
     colored-man-pages 
     common-aliases
     composer 
-    cp 
+    cp
+    debian
     docker 
     docker-compose 
     git 
