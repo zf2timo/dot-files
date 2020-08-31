@@ -60,6 +60,7 @@ plugins=(
     git-extras 
     git-flow 
     history-substring-search 
+    jump
     sudo
 )
 
