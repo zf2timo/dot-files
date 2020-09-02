@@ -117,7 +117,7 @@ alias dns-flush='sudo systemd-resolve --flush-caches'
 alias weather-ms="curl wttr.in/Münster"
 
 # layziness
-alias dev="cd ~/dev/"
+alias j="jump"
 
 # Stupidity nets
 
