@@ -96,12 +96,13 @@ alias wget='wget -c'
 # Tools
 alias delete-old-branches="sh ~/cleanUpGitBranches.sh"
 alias my-ip='dig +short myip.opendns.com @resolver1.opendns.com'
+alias dns-statistic='sudo systemd-resolve --statistics'
+alias dns-flush='sudo systemd-resolve --flush-caches'
 
 # weather
 alias weather-ms="curl wttr.in/Münster"
 
 # layziness
-alias storage="cd ~/storage"
 alias dev="cd ~/dev/"
 
 # Stupidity nets
@@ -118,6 +119,11 @@ alias ln='ln -i'
 alias chown='chown --preserve-root'
 alias chmod='chmod --preserve-root'
 alias chgrp='chgrp --preserve-root'
+
+# Load system specific alias file
+if [ -f ~/.zsh_aliases ]; then
+    source ~/.zsh_aliases
+fi
 
 # -------------------------------------------------------------------
 # FUNCTIONS
