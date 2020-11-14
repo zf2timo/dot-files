@@ -2,7 +2,7 @@
 
 set +e
 
-sudo apt install -y 
+sudo apt install -y \ 
     curl \
     git \
     g++ \
