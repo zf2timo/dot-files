@@ -53,6 +53,8 @@ sudo apt install -y \
     keepassx \
     keepassxc \
     lm-sensors \
+    moc \
+    moc-ffmpeg-plugin \
     nautilus-nextcloud \
     opera \
     pwgen \
