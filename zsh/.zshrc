@@ -87,6 +87,8 @@ source $ZSH/oh-my-zsh.sh
 # ALIASES
 # -------------------------------------------------------------------
 
+alias ls="ls --group-directories-first"
+
 # Oh my ZSH Plugin extension
 alias dcrr='dcr --rm'
 
