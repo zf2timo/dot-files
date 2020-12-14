@@ -87,6 +87,8 @@ source $ZSH/oh-my-zsh.sh
 # ALIASES
 # -------------------------------------------------------------------
 
+alias ls="ls --group-directories-first"
+
 # Oh my ZSH Plugin extension
 alias dcrr='dcr --rm'
 
@@ -96,6 +98,7 @@ alias wget='wget -c'
 # Tools
 alias delete-old-branches="sh ~/cleanUpGitBranches.sh"
 alias my-ip='dig +short myip.opendns.com @resolver1.opendns.com'
+alias host-ip="ip -4 addr show scope global dev eno2 | grep inet | awk '{print \$2}' | cut -d / -f 1 | sed -n 1p"
 alias dns-statistic='sudo systemd-resolve --statistics'
 alias dns-flush='sudo systemd-resolve --flush-caches'
 
