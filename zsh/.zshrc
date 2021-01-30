@@ -49,7 +49,21 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git git-flow git-extras history-substring-search vagrant composer cp docker docker-compose)
+plugins=(
+    colored-man-pages 
+    common-aliases
+    composer 
+    cp
+    debian
+    docker 
+    docker-compose 
+    git 
+    git-extras 
+    git-flow 
+    history-substring-search 
+    jump
+    sudo
+)
 
 # User configuration
 
@@ -87,6 +101,8 @@ source $ZSH/oh-my-zsh.sh
 # ALIASES
 # -------------------------------------------------------------------
 
+alias ls="ls --group-directories-first"
+
 # Oh my ZSH Plugin extension
 alias dcrr='dcr --rm'
 
@@ -96,6 +112,7 @@ alias wget='wget -c'
 # Tools
 alias delete-old-branches="sh ~/cleanUpGitBranches.sh"
 alias my-ip='dig +short myip.opendns.com @resolver1.opendns.com'
+alias host-ip="ip -4 addr show scope global dev eno2 | grep inet | awk '{print \$2}' | cut -d / -f 1 | sed -n 1p"
 alias dns-statistic='sudo systemd-resolve --statistics'
 alias dns-flush='sudo systemd-resolve --flush-caches'
 
@@ -103,7 +120,7 @@ alias dns-flush='sudo systemd-resolve --flush-caches'
 alias weather-ms="curl wttr.in/Münster"
 
 # layziness
-alias dev="cd ~/dev/"
+alias j="jump"
 
 # Stupidity nets
 
