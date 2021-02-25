@@ -6,4 +6,4 @@ ln -s ~/dot-files/bash/.bash_aliases ~/.bash_aliases
 ln -s ~/dot-files/git/.gitconfig ~/.gitconfig
 ln -s ~/dot-files/git/.gitignore_global ~/.gitignore_global
 ln -s ~/dot-files/zsh/.zshrc ~/.zshrc
-
+ln -s ~/dot-files/.moc ~/.moc
