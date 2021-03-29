@@ -1,2 +1,4 @@
 .moc/cache/*
 .moc/pid
+.moc/last_directory
+.moc/*.m3u
