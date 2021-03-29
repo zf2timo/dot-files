@@ -115,6 +115,7 @@ alias my-ip='dig +short myip.opendns.com @resolver1.opendns.com'
 alias host-ip="ip -4 addr show scope global dev eno2 | grep inet | awk '{print \$2}' | cut -d / -f 1 | sed -n 1p"
 alias dns-statistic='sudo systemd-resolve --statistics'
 alias dns-flush='sudo systemd-resolve --flush-caches'
+alias mocp="mocp -T /usr/share/moc/themes/transparent-background"
 
 # weather
 alias weather-ms="curl wttr.in/Münster"
