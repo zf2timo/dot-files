@@ -54,7 +54,6 @@ plugins=(
     common-aliases
     composer 
     cp
-    debian
     docker 
     docker-compose 
     git 
@@ -62,7 +61,9 @@ plugins=(
     git-flow 
     history-substring-search 
     jump
+    rust
     sudo
+    ubuntu
 )
 
 # User configuration
