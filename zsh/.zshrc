@@ -59,6 +59,7 @@ plugins=(
     git 
     git-extras 
     git-flow 
+    golang
     history-substring-search 
     jump
     rust
