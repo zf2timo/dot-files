@@ -7,3 +7,5 @@ ln -s ~/dot-files/git/.gitconfig ~/.gitconfig
 ln -s ~/dot-files/git/.gitignore_global ~/.gitignore_global
 ln -s ~/dot-files/zsh/.zshrc ~/.zshrc
 ln -s ~/dot-files/.moc ~/.moc
+
+ln -s ~/dot-files/ubuntu-update.sh /usr/local/bin/full-update
