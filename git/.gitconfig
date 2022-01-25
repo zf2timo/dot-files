@@ -10,3 +10,14 @@
     hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
 [commit]
 	gpgsign = true
+[pull]
+	rebase = false
+[init]
+	defaultBranch = main
+[user]
+	name = Timo Tewes
+	email = timo.tewes@gmail.com
+
+# Allow system specific configuration
+[include]
+    path = ~/git.local.conf
